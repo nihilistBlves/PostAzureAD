@@ -1,0 +1,1 @@
+﻿@inject UserManager<IdentityUser> UserManager;<h1 >    Mi cuenta</h1><h2 style="color:lightseagreen">@UserManager.GetUserName(User)</h2><ul class="list-group">    @foreach (var claim in User.Claims) {        <li class="list-group-item">            <b>@claim.Type</b> @claim.Value        </li>     }</ul>
